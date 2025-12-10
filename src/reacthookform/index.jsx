@@ -18,6 +18,7 @@ function Reacthookform() {
                     <label htmlFor="email">Email</label>
                     <input {...register('email', {
                         required: true
+                        // here required property tells the browser that the register element is compulsory to get filed
                     })} name="email" type="email" id="email" />
                     {
                         errors.email && errors.email.type === 'required' ? (<p>enter email</p>) : null
