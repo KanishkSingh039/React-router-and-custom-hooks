@@ -1,6 +1,7 @@
 import './App.css'
 import Commentlist from './comment-list'
 import Layout from './component/layoutpage';
+import Hooks from './hooks';
 import Notfound from './notfoundpage';
 import Reacthookform from './reacthookform';
 import Rescipedetails from './recipe-details';
@@ -24,6 +25,10 @@ function CustomRoutes()
     {
       path:'/react-hook-form',
       element:<Reacthookform/>
+    },
+    {
+      path:'/hooks',
+      element:<Hooks/>
     },
   ]);
   return(
