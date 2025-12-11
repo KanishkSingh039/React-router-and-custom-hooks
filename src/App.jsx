@@ -7,6 +7,7 @@ import Reacthookform from './reacthookform';
 import Rescipedetails from './recipe-details';
 import Rescipie from './resciepi-list'
 import { Routes,Route, useNavigate, Link, useRoutes } from 'react-router-dom';
+import Usememo from './usememo';
 function CustomRoutes()
 {
   const element1=useRoutes([
@@ -29,6 +30,10 @@ function CustomRoutes()
     {
       path:'/hooks',
       element:<Hooks/>
+    },
+    {
+      path:'/usememo',
+      element:<Usememo/>
     },
   ]);
   return(
