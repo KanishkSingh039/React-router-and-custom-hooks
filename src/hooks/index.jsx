@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Hooks() {
     const countvalue=useRef(0);//useref uses to refer any dom element , on the change of value of the refered element react will not re render the component
@@ -6,10 +6,19 @@ function Hooks() {
     //and after refering that dom element you can do lot of thing like changing the color of etc
     const element=useRef();
     const inputref=useRef();
+    const [inputvalue,setinputvalue]=useState(null);
     function handleclick()
     {
         countvalue.current++;
         console.log(countvalue.current);
+        console.log(inputref.current.value);
+        // return(
+        //     <div>
+        //         <h1>{inputref.current.value}</h1>
+        //     </div>
+        // )//event handler never return the dom or ui
+        //so to to show any update in dom or ui through event handler use state
+        setinputvalue(inputref.current.value);
         
     }
     useEffect(()=>{
@@ -30,6 +39,7 @@ function Hooks() {
             <button onClick={handleclick}>click</button>
             <div ref={element}>heyy</div>
             <input name="name" type="text" ref={inputref}/>
+            <h3>{inputvalue}</h3>
         </div>
     )
 }
