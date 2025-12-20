@@ -12,7 +12,7 @@ function Usememo() {
     function filtering() {
         console.log("rendering");
         /* through loging out the rendring you can check that on toggling the flag without the use memo it rendering the whole component */
-        return(data?.products.map(product => {
+        return(data?.products&&data?.products.map(product => {
             if (product?.price && product?.price > 10) {
                 // console.log(product.title)
                 return (<li key={product?.id}>{product?.title}</li>)

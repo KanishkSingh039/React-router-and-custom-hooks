@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 function Hooks() {
-    const countvalue=useRef(0);//useref uses to refer any dom element , on the change of value of the refered element react will not re render the component
+    const countvalue=useRef(0);
+    //useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+    //useref uses to refer any dom element , on the change of value of the refered element react will not re render the component
+    //basically useref refers which dont need to render
     //it gives the mutable object having a current value and that current value is the refered element
     //and after refering that dom element you can do lot of thing like changing the color of etc
     const element=useRef();
