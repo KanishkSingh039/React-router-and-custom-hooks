@@ -8,6 +8,7 @@ import Rescipedetails from './recipe-details';
 import Rescipie from './resciepi-list'
 import { Routes,Route, useNavigate, Link, useRoutes } from 'react-router-dom';
 import Usememo from './usememo';
+import Callback from './usecallback';
 function CustomRoutes()
 {
   const element1=useRoutes([
@@ -34,6 +35,10 @@ function CustomRoutes()
     {
       path:'/usememo',
       element:<Usememo/>
+    },
+    {
+      path:'/callback',
+      element:<Callback/>
     },
   ]);
   return(
