@@ -9,6 +9,7 @@ import Rescipie from './resciepi-list'
 import { Routes,Route, useNavigate, Link, useRoutes } from 'react-router-dom';
 import Usememo from './usememo';
 import Callback from './usecallback';
+import ReactQuerry from './tanstackQuerry/reactquerry';
 function CustomRoutes()
 {
   const element1=useRoutes([
@@ -39,6 +40,10 @@ function CustomRoutes()
     {
       path:'/callback',
       element:<Callback/>
+    },
+    {
+      path:'/ReactQuerry',
+      element:<ReactQuerry/>
     },
   ]);
   return(
