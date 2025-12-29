@@ -25,6 +25,12 @@ function ReactQuerry() {
         await mutateAsync(product);
         setproduct("");
     }
+    /* User clicks Add Product
+    mutateAsync(product) runs
+    API adds product
+    invalidateQueries runs
+    useQuery auto re-fetches list
+    UI updates */
     function handleclick(event) { setproduct(event.target.value); }
     if (isLoading) return <h1>Loading!!!</h1>
     return (
